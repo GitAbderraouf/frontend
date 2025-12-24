@@ -7,7 +7,7 @@ import { searchRegulations } from '../lib/api';
 import RegulationCard from '../components/RegulationCard';
 import ArticleModal from '../components/ArticleModal';
 import Filters from '../components/Filters';
-
+import NewsletterForm from '@/components/NewsletterForm';
 import { GraduationCap, ShieldAlert, Loader2 } from 'lucide-react';
 
 export default function Page() {
@@ -121,6 +121,9 @@ export default function Page() {
           </div>
         )}
       </main>
+      <div className="flex-1">
+      <NewsletterForm/>
+      </div>
 
       {/* Modal */}
       {selectedDoc && (

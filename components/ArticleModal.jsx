@@ -1,8 +1,8 @@
 "use client";
 
 import { X, Calendar, MapPin, Shield } from 'lucide-react';
-import { useEffect } from 'react';
-
+import React, { useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
 export default function ArticleModal({ doc, onClose }) {
   // Prevent body scroll when modal is open
   useEffect(() => {
@@ -72,12 +72,12 @@ export default function ArticleModal({ doc, onClose }) {
           )}
 
           {/* Raw Content */}
-          <div>
+          {/* <div>
              <h3 className="text-lg font-serif font-bold text-slate-900 mb-4 border-b pb-2">Contenu du texte</h3>
              <div className="prose prose-slate max-w-none text-slate-700 leading-relaxed whitespace-pre-wrap font-serif">
-               {doc.content_raw}
+                <ReactMarkdown>{doc.analysis.content_translated}</ReactMarkdown>
              </div>
-          </div>
+          </div> */}
 
         </div>
         
